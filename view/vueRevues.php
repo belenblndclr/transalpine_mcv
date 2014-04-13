@@ -5,6 +5,7 @@
 	<div class="menu menurevue" style="height: 100%; background-color: white; position: fixed;">
 		<?php include_once("template/vueNavbar.php"); ?>
 		<?php include_once("template/vueForm.php"); ?>
+
 	</div>
 
 	<section id="content" style="height: 100%;">
@@ -18,7 +19,7 @@
 				<?php foreach ($all as $revue): ?>	
 				<li data-keyword="<?php echo $revue['KEYWORD1']; ?> <?php echo $revue['KEYWORD2']; ?> <?php echo $revue['KEYWORD3']; ?>" data-date="<?php echo $revue['DATEPUBLICATION']; ?>"> 
 					<span class="couv">
-						<img src="<?php echo $revue['COUV']; ?>" /> 
+						<img src="common/<?php echo $revue['COUV']; ?>" /> 
 					</span>
 					<span class="col1">
 						<p><b>Date</b><br/> <?php echo $revue['DATEPUBLICATION']; ?></p>
@@ -44,4 +45,5 @@
 			</div>
 			
 		</div>
-	</section>
+	</section>	
+	<?php include_once("template/vueFooter.php"); ?>

@@ -53,3 +53,5 @@
 			
 		</div>
 	</section>
+	
+	<?php include_once("template/vueFooter.php"); ?>

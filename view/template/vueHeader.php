@@ -19,30 +19,25 @@
 	<meta name="geo.country" content="<?php echo (!empty($country)) ? $country : ''; ?>" />
 
     <title><?php echo (!empty($title)) ? $title : ''; ?></title>
-	
-	
-	<?php if($page == "revues"): ?>
-		<link rel="stylesheet" href="css/filtrify/filtrify.css">
-		<link rel="stylesheet" href="css/filtrify/jPages.css">
-		
-		
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script src="js/filtrify/filtrify.js"></script>
-		<script src="js/filtrify/highlight.pack.js"></script>
-		<script src="js/filtrify/jPages.min.js"></script>
-		<script src="js/filtrify/jquery.isotope.min.js"></script>
-		<script src="js/filtrify/jquery.lazyload.min.js"></script>
-		<script src="js/filtrify/script.js"></script>
-	<?php endif; ?>
 
     <link href="common/css/style.css" rel="stylesheet">
     <link href="common/css/icon_font.css" rel="stylesheet">
 	
 		
+	<?php if($page == "admin"): ?>
+	
+		<link href="common/css/footable/footable.core.css" rel="stylesheet" type="text/css"/>
+		<link href="common/css/footable/bootstrap.css" rel="stylesheet" type="text/css"/>
+	<?php endif; ?>
 	<?php if($page == "moderation"): ?>
-		<link href="css/footable/footable.core.css" rel="stylesheet" type="text/css"/>
+		<link href="common/css/footable/footable.core.css" rel="stylesheet" type="text/css"/>
 	<?php endif; ?>
 	
+		
+	<?php if($page == "revues"): ?>
+		<link rel="stylesheet" href="common/css/filtrify/filtrify.css">
+		<link rel="stylesheet" href="common/css/filtrify/jPages.css">	
+	<?php endif; ?>
 
   </head>
   
