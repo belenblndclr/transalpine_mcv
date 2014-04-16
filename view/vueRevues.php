@@ -23,7 +23,7 @@
 					</span>
 					<span class="col1">
 						<p><b>Date</b><br/> <?php echo $revue['DATEPUBLICATION']; ?></p>
-						<p><b>Référence</b><br/>  <?php echo $revue['IDREVUE']; ?> <br/>
+						<p><b>Référence</b><br/>  <?php echo $revue['REFERENCE']; ?> <br/>
 						</p>
 						
 						<p>

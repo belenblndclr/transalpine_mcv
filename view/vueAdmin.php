@@ -5,7 +5,7 @@
   <div class="adminpanel">
 	<section class="deco">
 		<a href="deconnection.php">Déconnexion <i class="icon-cancel-circled2"></i></a><br>
-		<a href="../index.php">Accueil du site <i class="icon-home-circled"></i></a>
+		<a href="index.php">Accueil du site <i class="icon-home-circled"></i></a>
 	</section>
 				
 	<h1>Administration du Site</h1>	
@@ -42,8 +42,8 @@
 						<td><?php echo $admin['DATE']; ?></td>
 						<td><?php echo $admin['SIECLE']; ?></td>
 						<td><?php echo $admin['TYPOLOGIE']; ?></td>
-						<td><a class="icon-pencil-circled" href="edit.php?p=<?php echo $admin['IDDOC']; ?>"> </a></td>
-						<td><a class="delete icon-cancel" href="delete.php?p<?php echo $admin['IDDOC']; ?>"></a></td>
+						<td><a class="icon-pencil-circled" href="editDoc.php?p=<?php echo $admin['IDDOC']; ?>"> </a></td>
+						<td><a class="delete icon-cancel" href="deleteDoc.php?p<?php echo $admin['IDDOC']; ?>"></a></td>
 					</tr>
 					
 					<?php endforeach; ?>
@@ -57,8 +57,8 @@
 					</tfoot>
 				</table>				
 				<section class="gestion_nav">
-					<a href="admin/add_article.php" target="_top">
-						<i class="icon-location-circled"></i> Ajouter un 	Document
+					<a href="admin/addDoc.php" target="_top">
+						<i class="icon-location-circled"></i> Ajouter un Document
 					</a>
 					<a href="admin/SQLtoXML.php">
 						<i class="icon-globe-alt"></i> Générer la carte
@@ -73,7 +73,6 @@
 				<table class="table" data-filter="#filter2" data-page-size="5">
 				<thead>
 					<tr>
-					<th>ID</th>
 					<th>Date de Publication</th>
 					<th>Référence</th>
 					<th>Couverture</th>
@@ -89,15 +88,14 @@
 				
 				<?php foreach ($allR as $admin): ?>	
 				<tr>
-					<td><?php echo $admin['IDREVUE']; ?></td>
 					<td><?php echo $admin['DATEPUBLICATION']; ?></td>
 					<td><?php echo $admin['REFERENCE']; ?></td>
 					<td><img src="common/<?php echo $admin['COUV']; ?>" height="100px"/></td>
 					<td><?php echo $admin['TITRE']; ?></td>
 					<td><?php echo $admin['PREVIEW']; ?></td>
 					<td><?php echo $admin['KEYWORD1']; ?></td>
-					<td><a class="icon-pencil-circled" href="admin/editRevue.php?p=<?php echo $admin['IDREVUE']; ?>"> </a></td>
-					<td><a class="delete icon-cancel" href="admin/deleteRevue.php?p<?php echo $admin['IDREVUE']; ?>"></a></td>
+					<td><a class="icon-pencil-circled" href="admin/editRevue.php?p=<?php echo $admin['REFERENCE']; ?>"> </a></td>
+					<td><a class="delete icon-cancel" href="admin/deleteRevue.php?p<?php echo $admin['REFERENCE']; ?>"></a></td>
 				</tr>
 				
 				<?php endforeach; ?>
@@ -112,7 +110,7 @@
 				</table>
 				
 				<section class="gestion_nav">
-					<a href="add_article.php" target="_top">
+					<a href="admin/addRevue.php" target="_top">
 						<i class="icon-doc-new-circled"></i> Ajouter une Revue
 					</a>
 				</section>
