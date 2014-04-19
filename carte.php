@@ -44,11 +44,11 @@
 			switch ($typol) {
 				case "chartre" :
 				$stations = $map->getDoc($region, $siecle, $typol);
-				$stationsCount = $map->getCount($region);
+				$stationsCount = $map->getCount($region, $siecle, $typol);
 				break;
 				case "test" :
 				$stations = $map->getDoc($region, $siecle, $typol);
-				$stationsCount = $map->getCount($region);
+				$stationsCount = $map->getCount($region, $siecle, $typol);
 				break;
 			}
 		} else {

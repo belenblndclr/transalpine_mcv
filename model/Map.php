@@ -63,11 +63,22 @@ class Map extends BDD{
 		return $datas; // Accès au résultat
     }
 	
-	function getCount($region) {
+	function getCount($region ="", $siecle ="", $typol="") {
         $bdd = parent::getBdd();
 		
 		$sql = parent::SELECT('count(*)');
 		$sql .= parent::FROM('`document`');
+		
+		if (!empty($region)){
+			$sql .= parent::WHEREAND('region ='.$region);
+		}		
+		if (!empty($siecle)){
+			$sql .= parent::WHEREAND('siecle = '.$siecle);
+		}
+			
+		if (!empty($typol)){
+			$sql .= parent::WHEREAND('typo = '.$typol);
+		}
 			
         $datas = $bdd->query($sql);
 		
