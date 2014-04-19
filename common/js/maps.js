@@ -40,13 +40,9 @@ $(function() {
 					var station = locations[i];
 					infoWindow.close();
 					infoWindow.setContent(
-						"<div id='infoWindow'>"
-							+"<p class='ville'>"+station.join("")+"</p>"
-							+"<p class='habitants'>"+station[3]+" Habitants</p>"
-							+"Coordonnées : <br />"
-							+"<p class='indent'>Latitude : "+station[0]+"</p>"
-							+"<p class='indent'>Longitude : "+station[1]+"</p>"
-						+"</div>"
+						"<div id='infoWindow'><p>"
+							+station[1]+"</p><p>"+station[2]+"</p><p>"+station[3]+"</p><p>"+station[4]+"</p><p>"+station[5]+"</p><p>"+station[6]+"</p><p>"+station[0]
+						+"</p></div>"
 					);
 					infoWindow.open(map, this);
 				});

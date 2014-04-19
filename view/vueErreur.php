@@ -1,6 +1,9 @@
 <?php include_once("template/vueHeader.php"); ?>
 
-  <body>
+<html style="height: 100%;">
+  <body style="height: 100%;">  
+	<div class="menu" style="height: 100%;" role="navigation">
+		<?php include_once("template/vueNavbar.php"); ?>
 
     <?php include_once("template/vueNavbar.php"); ?>
 
