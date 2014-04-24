@@ -55,6 +55,14 @@ class BDD {
 		return $sql = " GROUP BY ".$groupby;
 	}
 	 
+	function DELETE( $delete ) {
+		return $sql = " DELETE FROM".$delete;
+	}
+	
+	function UPDATE( $update, $set, $new) {
+		return $sql = " UPDATE ".$update." SET ".$set." = ".$new;
+	}
+	 
 //__Effectue un ORDER BY selon une (ou plusieurs) colonne(s)
 	function ORDERBY( $order, $clause = "ASC" ) {
 		$sql = " ORDER BY ".$order;
@@ -65,6 +73,7 @@ class BDD {
 		
 		return $sql;
 	}
+	
 	
 //__Effectue un LIMIT d'une (ou plusieurs) table(s)
 	function LIMIT( $limit ) {

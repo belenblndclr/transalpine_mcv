@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Sertig"; 
+  src: url(font/Sertig.otf) format("opentype");
+}
+@font-face {
+  font-family: "SubtleLight";
+  src: url(font/SubtleSansLight.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Sertig"; 
+  src: url(font/Sertig.otf) format("opentype");
+}
+@font-face {
+  font-family: "SubtleLight";
+  src: url(font/SubtleSansLight.ttf) format("truetype");
+}
+@font-face {
+  font-family: "SubtleRegular";
+  src: url(font/SubtleSansRegular.ttf) format("truetype");
+}
+
+/*************************** GENERAL*/
+html,body { margin: 0; padding: 0; font-family: Sertig; }
+ul, li { list-style: none;}
+a  {color: #6D6D6D; text-decoration: none;}
+.under {text-decoration: underline;}
+/************************** ADMIN PANEL*/
+.adminpanelbody {background-color: #404040; margin: 0; padding: 0 2em 2em 2em;color: white;}
+.adminpanel a {color: white; font-size: 0.9em;}
+.adminpanel a:hover {text-decoration: none; color: #7D0071;}
+.adminpanel h1, .connexionpanel h1 {color: white; text-shadow: 0.05em 0.05em 0 rgba(0,0,0,1); text-align: center; font-size: 4em; text-transform: uppercase; margin-top: 1em; margin-bottom: 1em;}
+	
+.adminpanel .deco { float: right; text-align: right;}
+
+.adminpanel table {width: 100%; background-color: #303030; color: #F7F7F7;}
+.adminpanel table tr td {padding-left: 1em; border: 0;}
+.adminpanel table tr:nth-child(even) {background-color: #444444;}
+.adminpanel table thead {background-color:#282828; font-family: Courier; }
+.adminpanel table thead tr th {text-align: center;}
+.adminpanel table a{color: white;}
+.adminpanel table a:hover {color: #7D0076;}
+.adminpanel table tr th:first-of-type, .adminpanel table tr th:last-of-type, .adminpanel table tr th:nth-last-child(2) {width: 3em;}
+.adminpanel table tbody tr td:first-of-type, .adminpanel table tbody tr td:last-of-type, .adminpanel table tbody tr td:nth-last-child(2) {text-align: center;}
+
+.adminpanel input {border-radius: 0; margin: 0 1em;}
+.adminpanel .tab-content {background-color: #141414; padding: 1em 0.2em 1em 0.2em;}
+.adminpanel table td.region1:after {content:"Savoie";}
+.adminpanel table td.region2:after {content:"Piémont";}
+.adminpanel table td.region3:after {content:"Dauphiné";}
+.adminpanel table td.region4:after {content:"Suisse";}
+
+.adminpanel .gestion_nav {font-size: 1.5em;}
+.adminpanel .gestion_nav i {padding-right: 0.5em;}
+.adminpanel .gestion_nav a {margin-right: 2em;}
+
+fieldset {border: 0; background-color: rgba(0,0,0,0.3); margin: 0.5em; width: 40em;}
+fieldset input[type=text] {background-color: rgba(255,255,255,0.3); border: 0; padding: 0.5em; margin: 0.1em; width: 20em;}
+fieldset textarea {background-color: rgba(255,255,255,0.3); border: 0; padding: 0.5em; margin: 0.1em; width: 20em;}
+fieldset label {display: block;}
+
+fieldset .info {display: block; width: 50%; color: red; float: right; font-family: Courier; opacity: 0.7; font-size: 0.8em; }

@@ -11,8 +11,7 @@
 			<div class="page accueilpage">
 				<div class="section one">
 					<h1>L'histoire opère lentement</h1>
-					<p> Mesdames, messieurs, l'effort prioritaire en faveur du statut précaire des exclus doit nous amener au choix réellement impératif d'une restructuration dans laquelle chacun pourra enfin retrouver sa dignité.</p>
-					<p>Je me tiens devant vous et vous dis que la politique globale mondialiste conforte mon désir incontestable d'aller dans le sens d'un plan correspondant véritablement aux exigences légitimes de chacun.</p>
+					<p>Consultez facilement la documentation écrite du moyen-age de la région transalpine. Retrouvez manuscrits, chartes, cartulaires et autres écrits côte-à-côte avec leurs transcriptions. Vous êtes historiens ? Participez en proposant vos transcriptions ou apportez d'éventuelles corrections au travaux proposés !</p>
 					
 					
 					<span class="carte"><a href="carte.php">Explorer la carte</a></span>

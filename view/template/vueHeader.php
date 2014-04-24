@@ -32,6 +32,10 @@
 	<?php if($page == "moderation"): ?>
 		<link href="common/css/footable/footable.core.css" rel="stylesheet" type="text/css"/>
 	<?php endif; ?>
+	<?php if($page == "carte"): ?>
+	<!--	<link href="common/css/slider/ion.rangeSlider.css" rel="stylesheet" type="text/css"/>
+		<link href="common/css/slider/ion.rangeSlider.skinFlat.css" rel="stylesheet" type="text/css"/>-->
+	<?php endif; ?>
 	
 		
 	<?php if($page == "revues"): ?>

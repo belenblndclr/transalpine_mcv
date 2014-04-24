@@ -83,7 +83,7 @@ header nav .in {box-shadow: 0 0 0.5em rgba(0,0,0,0.4) inset; font-weight: bolder
 /********* APROPOS*/
 .apropospage {padding-top: 0;}
 .apropospage h2 {padding:0; margin:0;}
-.apropospage span{float: left; width: 25%; text-align: center;}
+.apropospage span{float: left; width: 32%; text-align: center;}
 .apropospage p{ visibility: hidden; margin:0; padding:0;}
 .apropospage .a:hover  > p, .apropospage .b:hover  > p, .apropospage .c:hover  > p, .apropospage .d:hover  > p {visibility: visible;}
 .apropospage .two {height: 5em; background-color: #FF9B00; bottom: 0; position: fixed; width: 100%;}
@@ -92,6 +92,16 @@ header nav .in {box-shadow: 0 0 0.5em rgba(0,0,0,0.4) inset; font-weight: bolder
 .xl {width: 15em; font-size: 10em; opacity: 0.8; color: #333333;text-shadow: 0 0 0.6em rgba(0,0,0,0.2);  margin: 0; padding: 0; height: 20em;}
 .xs { font-size: 0.8em; opacity: 0.5; color: #404040;text-shadow: 0 0 0.1em rgba(0,0,0,0.1); }
 .l {font-size: 4em; margin: 0; color: white; padding:0;}
+
+/********* DOC*/
+.docpage .one { height: 50%; !important;}
+.docpage .section{ padding-left: 1em; padding-right: 0;}
+.docpage .section .part {width: 48%; float: left; height:100% ; overflow: auto; padding: 1%; margin: 0;   padding-top: 5em;}
+.docpage .section .my-img {background-color: #890080;}
+.docpage .section .my-editor {background-color: #7D0076; font-size: 1em; font-family: arial; }
+.docpage .two {height: 5em;}
+
+.docpage .two a {padding:1em; background-color: red;}
 
 /********* REVUE*/
 .revuepage {padding-top: 0;}
@@ -135,17 +145,20 @@ header nav .in {box-shadow: 0 0 0.5em rgba(0,0,0,0.4) inset; font-weight: bolder
 /****************** RECHERCHE*/
 fieldset {background-color: #E4E4E4; margin: 1.3em 1em; padding: 0; border: none; }
 fieldset legend {width: 7em; float: right; padding: 0.4em 0.5em; text-align:center; margin-left: 1em; color: #7D0076; background-color: #D1D1D1; font-weight: bold;}
-/*fieldset input {display: none;}*/
+fieldset input[type=checkbox] {display: none;}
+fieldset input[type=checkbox]:checked + label{  
+        color: #7D0076;  
+    }  
 fieldset label {display:block; float:right; cursor: pointer; color: #9E9E9E; margin: 0.45em 0; padding: 0 0.3em; border-right: 1px solid #9E9E9E; font-size: 0.9em;}
 fieldset label:first-of-type {border:0;}
 fieldset label:hover {color: #7D0076;}
 fieldset label:active {color: #7D0076;}
 fieldset #ref {display: block; float: right;}
-form fieldset:last-child  { background-color: white; } 
-form fieldset:last-child input[type="submit"]{ display: block; float:right; background-color: #FBA830; color: #7D0076; border: 0; height: 30px; margin:0;}
-form fieldset:last-child input[type="text"]{height: 30px; box-shadow: 0 0 0.2em rgba(0,0,0,0.2); margin-right: 0.5em; padding:0; border:0; padding-left: 0.5em; font-style: oblique; color: rgba(0,0,0,0.5);}
+fieldset:last-child  { background-color: white; } 
+fieldset:last-child input[type=submit]{ display: block; float:right; background-color: #FBA830; color: #7D0076; border: 0; height: 30px; margin:0;}
+fieldset:last-child input[type=text]{height: 30px; box-shadow: 0 0 0.2em rgba(0,0,0,0.2); margin-right: 0.5em; padding:0; border:0; padding-left: 0.5em; font-style: oblique; color: rgba(0,0,0,0.5);}
 
-form fieldset:nth-last-child(2) {background-color: white;}
+fieldset:nth-last-child(2) {background-color: white;}
 
 /********* ONOFF SWITCH*/
 

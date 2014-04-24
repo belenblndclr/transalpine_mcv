@@ -17,7 +17,7 @@ class Map extends BDD{
 		$sql .= parent::ORDERBY('`region`');
 		
         $datas = $bdd->query($sql);
-		
+		/
 		while ($resultat = $datas->fetch()) {
             $billet[] = $resultat;
         }
@@ -29,7 +29,7 @@ class Map extends BDD{
 	function getSimple($nb=100) {
         $bdd = parent::getBdd();
 		
-		$sql = parent::SELECT('IDDOC as id, IDREGION as region, SIECLE as siecle, TYPOLOGIE as typo, longitude as longitude, latitude as latitude');
+		$sql = parent::SELECT('*');
 		$sql .= parent::FROM('`document`');
 		$sql .= parent::LIMIT($nb);
 		
@@ -40,46 +40,71 @@ class Map extends BDD{
     }
 	
 	
-	function getDoc( $region ="", $siecle ="", $typol="") {
+	function getDoc($region ="", $siecle ="", $typol="", $id="") {
         $bdd = parent::getBdd();
 		
-		$sql = parent::SELECT('IDDOC as id, IDREGION as region, SIECLE as siecle, TYPOLOGIE as typo, longitude as longitude, latitude as latitude');
+		$sql = parent::SELECT('*');
 		$sql .= parent::FROM('`document`');
 		
 		if (!empty($region)){
-			$sql .= parent::WHEREAND('region ='.$region);	
+			$sql .= parent::WHERE('IDREGION = '.$region);	
 		}
 		
 		if (!empty($siecle)){
-			$sql .= parent::WHEREAND('siecle ='.$siecle);	
+			$sql .= parent::WHEREAND('SIECLE = '.$siecle);	
 		} 
 		
-		if (!empty($typo)){
-			$sql .= parent::WHEREAND('typo ='.$typol);	
+		if (!empty($typol)){
+			$sql .= parent::WHEREAND('TYPOLOGIE = '.$typol);	
 		} 
 		
+		if (!empty($id)){
+			$sql .= parent::WHERE('IDDOC = '.$id);	
+		} 
+		/*if (!empty($auth)){
+			$sql .= parent::WHERE('IDDOC = '.$auth);	
+		} */
+//echo $sql;
         $datas = $bdd->query($sql);
 		
 		return $datas; // Accès au résultat
     }
 	
-	function getCount($region ="", $siecle ="", $typol="") {
+	function getId( ) {
+        $bdd = parent::getBdd();
+		
+		$sql = parent::SELECT('IDDOC');
+		$sql .= parent::FROM('`document`');
+		$sql .= parent::ORDERBY('ASC');
+		
+        $datas = $bdd->query($sql);
+		
+		while ($resultat = $datas->fetch()) {
+            $billet[] = $resultat;
+        }
+		
+        return $billet; // Accès au résultat
+    }
+	
+	function getCount($region ="", $siecle ="", $typol="", $id="") {
         $bdd = parent::getBdd();
 		
 		$sql = parent::SELECT('count(*)');
 		$sql .= parent::FROM('`document`');
 		
 		if (!empty($region)){
-			$sql .= parent::WHEREAND('region ='.$region);
+			$sql .= parent::WHERE('IDREGION = '.$region);
 		}		
 		if (!empty($siecle)){
-			$sql .= parent::WHEREAND('siecle = '.$siecle);
+			$sql .= parent::WHERE('SIECLE = '.$siecle);
 		}
 			
 		if (!empty($typol)){
-			$sql .= parent::WHEREAND('typo = '.$typol);
+			$sql .= parent::WHERE('TYPOLOGIE = '.$typol);
 		}
-			
+		if (!empty($id)){
+			$sql .= parent::WHERE('IDDOC = '.$id);
+		}
         $datas = $bdd->query($sql);
 		
 		while ($resultat = $datas->fetch()) {

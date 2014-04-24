@@ -60,9 +60,6 @@
 					<a href="admin/addDoc.php" target="_top">
 						<i class="icon-location-circled"></i> Ajouter un Document
 					</a>
-					<a href="admin/SQLtoXML.php">
-						<i class="icon-globe-alt"></i> Générer la carte
-					</a>
 				</section>
 			</div>
 			<div class="tab-pane" id="revues">

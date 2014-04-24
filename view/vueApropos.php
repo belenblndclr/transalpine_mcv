@@ -11,27 +11,21 @@
 				<div class="section one">	
 				
 					<span class="a">
-						<i class="xl icon-universal-access"></i>
-						<h2>L'Expérience</h2>
-						<p>Ce site est a destination de tout public, désireux de parfaire ses connaissances en histoire locale et médiévale. Professeur, amateur ou simple curieux, il n'est pas nécessaire d'être passionné pour explorer l'histoire des Alpes via cette expérience.</p>
+						<i class="xl icon-book"></i>
+						<h2>Les Archives</h2>
+						<p>Retrouvez les travaux de transcription des historiens Christian Guilleré, .... Accédez aux versions numérisées des écrits médiévaux transalpins. </p>
 					</span>
 					
 					<span class="b">
-						<i class="xl icon-book"></i>
-						<h2>Les Archives</h2>
-						<p>Ce site est a destination de tout public, désireux de parfaire ses connaissances en histoire locale et médiévale. Professeur, amateur ou simple curieux, il n'est pas nécessaire d'être passionné pour explorer l'histoire des Alpes via cette expérience.</p>
+						<i class="xl icon-universal-access"></i>
+						<h2>L'Expérience</h2>
+						<p>Historiens, professeurs, amateurs ou simples curieux peuvent ici se plonger dans l'histoire des Alpes au travers de ces écrits médiévaux. Consultez facilement ces textes grâce à une navigation fluide, et retrouvez leur géolocalisation grâce à une carte interactive de la région ! Pour une expérience optimale, accéder au site via votre ordinateur ou tablette.</p>
 					</span>
 					<span class="c">
 						<i class="xl icon-lightbulb"></i>
-						<h2>Le projet</h2>
+						<h2>Le projet</h2>						
+						<p>Cette expérience a été développée par Antoine Jourdan et Lise Missillier, étudiants de Master 1 Hypermédia et Communication (promotion 2014), sous la direction de Marc Veyrat, Kévin Gautreau et Christian Guillere.</p>
 						
-						<p>Cette expérience a été développée par Antoine Jourdan et Lise Missillier, étudiants de Master 1 Hypermédia et Communication (promotion 2014) dans le cadre du cour de "Philosophie des Réseaux", sous la direction de Marc Veyrat, Kévin Gautreau et Christian J.</p>
-						
-					</span>
-					<span class="d">
-						<i class="xl icon-cc-1"></i>
-						<h2>Les Possibilités</h2>
-						<p>Ce site est a destination de tout public, désireux de parfaire ses connaissances en histoire locale et médiévale. Professeur, amateur ou simple curieux, il n'est pas nécessaire d'être passionné pour explorer l'histoire des Alpes via cette expérience.</p>
 					</span>
 				</div>
 				<div class="section two">

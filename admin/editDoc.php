@@ -4,7 +4,7 @@
  * gère la dynamique de l'application. Elle fait le lien entre l'utilisateur et le reste de l'application
  */
 	include_once("../model/BDD.php");
-	require_once("model/Edit.php");
+	require_once("model/Document.php");
 	
 	$titre = "Edition de document";
 	$page = "edit"; //__variable pour la classe "active" du menu-header
@@ -16,8 +16,8 @@
     $title = "";
 	
 //__Nom et mail du propriétaire du formulaire
-	$monNom = "Guillaume RICHARD";
-	$destinataire = "g.jf.richard@gmail.com";
+	$monNom = "";
+	$destinataire = "";
 	
 	
     try {

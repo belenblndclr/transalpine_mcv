@@ -17,16 +17,18 @@ class Document extends BDD {
 		return $data;
 	}
 	
-	function createD($iddoc, $region, $date, $siecle, $typo, $image, $transcription, $lat, $long){
+	function createD($iddoc, $region, $auteurd, $transcripteur, $date, $siecle, $typo, $image, $transcription, $lat, $long){
 		$bdd = parent::getBdd();
 		
-		$sql = parent::INSERTINTO('document (IDDOC, IDREGION, DATE, SIECLE, TYPOLOGIE, IMAGE, TRANSCRIPTION, latitude, longitude)');
-		$sql .= parent::VALUES(':iddoc, :region, :date, :siecle, :typo, :image, :transcription, :lat, :long');
+		$sql = parent::INSERTINTO('document (IDDOC, IDREGION, IDAUTEUR, IDTRANSCRIPTEUR, DATE, SIECLE, TYPOLOGIE, IMAGE, TRANSCRIPTION, latitude, longitude)');
+		$sql .= parent::VALUES(':iddoc, :region, :auteur, :transcripteur, :date, :siecle, :typo, :image, :transcription, :lat, :long');
 
 		$stmt = $bdd->prepare($sql);
 
 		$stmt->bindParam(':iddoc', $iddoc);
 		$stmt->bindParam(':region', $region);
+		$stmt->bindParam(':auteur', $auteurd);
+		$stmt->bindParam(':transcripteur', $transcripteur);
 		$stmt->bindParam(':date', $date);
 		$stmt->bindParam(':siecle', $siecle);
 		$stmt->bindParam(':typo', $typo);
@@ -40,13 +42,31 @@ class Document extends BDD {
 	}
 	
 	
-	function updateD() {
+	function updateD() { //update function
+		$bdd = parent::getBdd();
+		
+		$sql = parent::UPDATE('document');
+		$sql .= parent::VALUES(':iddoc, :region, :auteur, :transcripteur, :date, :siecle, :typo, :image, :transcription, :lat, :long');
+
+		$stmt = $bdd->prepare($sql);
+
+		$stmt->bindParam(':iddoc', $iddoc);
+		$stmt->bindParam(':region', $region);
+		$stmt->bindParam(':auteur', $auteurd);
+		$stmt->bindParam(':transcripteur', $transcripteur);
+		$stmt->bindParam(':date', $date);
+		$stmt->bindParam(':siecle', $siecle);
+		$stmt->bindParam(':typo', $typo);
+		$stmt->bindParam(':image', $image);
+		$stmt->bindParam(':transcription', $transcription);
+		$stmt->bindParam(':lat', $lat);
+		$stmt->bindParam(':long', $long);
+		
+		$stmt->execute();
 	
 	}
 	
 	function deleteD($iddoc) { //Delete function
-		$bdd = parent:getBdd();
-		$sql = parent:DELETE('');
 	}
 	
 }
